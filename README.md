@@ -7,11 +7,9 @@
 
 <h4 align="center"> JOSE CHRISTIAN ROMERO HERNANDEZ.</h4>
 
-<h4 align="center">  Data mining</h4>
-
 
 <h4 align="center"> Lopez Pablo Israel 17210585</h4>
-<h4 align="center"> Perez Ortega Victoria Valeria pendiente</h4>
+<h4 align="center"> Perez Ortega Victoria Valeria 18210718</h4>
 
 
 
