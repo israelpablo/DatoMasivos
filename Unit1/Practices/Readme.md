@@ -51,6 +51,7 @@ the firt option is for start the array and the next parameter is end of the arra
 val arreglo=Array.range(1, 1000, 5)
 ```
 #### Result
+![practica 3-4](https://user-images.githubusercontent.com/77422159/157061965-7349ee7a-8e92-4228-9955-0a6b5671c134.PNG)
 
 ### 5. What are the unique elements of the list List(1,3,3,4,6,7,3,7) use conversion to sets
 in this code we need to get only one value that are not repeated
@@ -59,6 +60,7 @@ val mylist = List(1,3,3,4,6,7,3,7)
 mylist.toSet
 ```
 #### Result
+![practica 3-5](https://user-images.githubusercontent.com/77422159/157061988-531af8ee-5bdd-4949-ade8-68160512a3b0.PNG)
 
 ### 6. Crea una mapa mutable llamado nombres que contenga los siguiente "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27"
 We create the map with the indicated values 
@@ -66,12 +68,16 @@ We create the map with the indicated values
 val mutmap =    collection.mutable.Map  (("Jose", 20),( "Luis", 24),( "Ana", 23),( "Susana", "27"))
 
 ```
+![practica 3-6](https://user-images.githubusercontent.com/77422159/157062016-c7aa9645-7f90-46b8-8767-d365610922d7.PNG)
+
 #### 6 a . Print all the keys on the map
 executing the following statement shows the keys of each data set
 ```
 mutmap.keys
 ```
 ##### Result
+![practica 3-6 1](https://user-images.githubusercontent.com/77422159/157062068-7d1a3fc4-fbf0-4ceb-a63d-e2d97316d39a.PNG)
+
 
 #### 6 b . Agrega el siguiente valor al mapa("Miguel", 23)
 with the following code the new values ​​are added to map
@@ -79,3 +85,4 @@ with the following code the new values ​​are added to map
 mutmap += ("Miguel" -> 23)
 ```
 ##### Result
+![practica 3-6 2](https://user-images.githubusercontent.com/77422159/157062103-9dea0773-b8f2-4304-bd8d-0316ca7739d4.PNG)
