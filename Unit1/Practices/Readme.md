@@ -26,10 +26,24 @@ if(primo){
 
 ``` 
 var bird = "tweet"
-printf("Estoy escribiendo un tweet", bird)
+printf("Estoy escribiendo un ${bird}tweet")
 ``` 
+### 4. Dada la variable var mensaje = "Hola Luke yo soy tu padre!" utiliza slice para extraer la secuencia "Luke"
+```
+var mensaje="Hola Luke yo soy tu padre!"
+mensaje slice(5,9)
+```
+#### Result
 
+### 5. Cúal es la diferencia entre value (val) y una variable (var) en scala?
+val is a value that can not modificated is a value static
+var is a value taht can modificated and we can change for other values.
 
+### 6. Dada la tupla (2,4,5,1,2,3,3.1416,23) regresa el número 3.1416
+```
+val tupla= (2,4,5,1,2,3,3.1416,23)
+tupla._7
+```
 ## Practice #3
 
 ### //1. Create a list called "list" with the elements "red", "white", "black"
