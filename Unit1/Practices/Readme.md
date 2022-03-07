@@ -34,6 +34,7 @@ var mensaje="Hola Luke yo soy tu padre!"
 mensaje slice(5,9)
 ```
 #### Result
+![practica 2-4](https://user-images.githubusercontent.com/77422159/157133222-cf00b9ed-b4e1-44d3-92df-501182852d3b.PNG)
 
 ### 5. Cúal es la diferencia entre value (val) y una variable (var) en scala?
 val is a value that can not modificated is a value static
@@ -44,6 +45,9 @@ var is a value taht can modificated and we can change for other values.
 val tupla= (2,4,5,1,2,3,3.1416,23)
 tupla._7
 ```
+#### Result
+![practica 2-6](https://user-images.githubusercontent.com/77422159/157133233-eba4d723-56e5-4aa0-9d29-a5f1639f7d86.PNG)
+
 ## Practice #3
 
 ### //1. Create a list called "list" with the elements "red", "white", "black"
