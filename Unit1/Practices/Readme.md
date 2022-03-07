@@ -44,3 +44,38 @@ var añadir= lista ::: List("verde" ,"amarillo", "azul", "naranja", "perla")
 ``` 
 añadir.slice(3,6)
 ``` 
+### 4. Create a array of range number 1-1000 to steps 5 in 5
+For this we need create the next  array is autogenerate
+the firt option is for start the array and the next parameter is end of the array and de last is the steps. 
+```
+val arreglo=Array.range(1, 1000, 5)
+```
+#### Result
+
+### 5. What are the unique elements of the list List(1,3,3,4,6,7,3,7) use conversion to sets
+in this code we need to get only one value that are not repeated
+```
+val mylist = List(1,3,3,4,6,7,3,7)
+mylist.toSet
+```
+#### Result
+
+### 6. Crea una mapa mutable llamado nombres que contenga los siguiente "Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27"
+We create the map with the indicated values 
+```
+val mutmap =    collection.mutable.Map  (("Jose", 20),( "Luis", 24),( "Ana", 23),( "Susana", "27"))
+
+```
+#### 6 a . Print all the keys on the map
+executing the following statement shows the keys of each data set
+```
+mutmap.keys
+```
+##### Result
+
+#### 6 b . Agrega el siguiente valor al mapa("Miguel", 23)
+with the following code the new values ​​are added to map
+```
+mutmap += ("Miguel" -> 23)
+```
+##### Result
