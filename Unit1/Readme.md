@@ -14,13 +14,13 @@
 <h1 align="center"> Indice </h1>
 
 ## Practices
-###[Practice  #2 y #3](https://github.com/israelpablo/DatoMasivos/tree/Unit1/Unit1/Practices/Readme.md)
-###[Practice  #3]
+### [Practice  #2 y #3](https://github.com/israelpablo/DatoMasivos/tree/Unit1/Unit1/Practices/Readme.md)
+### [Practice  #3]
 ## Research
 ### 
 ###  
 ## Homework
-###[Homework  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit1/Unit1/Homeworks/HomeWork1.md)
+### [Homework  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit1/Unit1/Homeworks/HomeWork1.md)
 ### 
 ## Evaluation
 ### 
