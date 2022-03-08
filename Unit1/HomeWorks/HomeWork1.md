@@ -14,3 +14,8 @@ Learning is something very important for which being 2 people this becomes more 
 
 Last but not least, we must remember that when working in pairs, it is necessary to understand that you should not monopolize since this will not enrich our project, and allowing the other to participate will allow you to have a better perspective of the objective to be achieved.
 ![download](https://user-images.githubusercontent.com/77422159/157055618-39de3375-2eee-45b1-9835-3dfc5fe07847.jpg)
+
+
+### ¿Qué   es Pair Conding?
+
+Es una práctica de programación que sólo se realiza en una sola PC, en un mismo lugar, se realiza por medio de dos personas, las cuales una es la que está programado y la otra está supervisado lo que se hace, se les llama por el nombre de “Programador” a él qué programa y por “Navegador” a el que supervisa, este tipo de programación se utiliza para tener un desarrollo ágil de software y sea más correcto, se dice que el tipo de rol que tenga las personas que están trabajado se cambien constantemente los papeles para que haya más agilidad y diferentes puntos de vista y ambas personas aporten por igual, de igual manera la persona a la que le toque estar programado tendrá que estar comentando en voz alta lo que está realizado, y si tiene soluciones o propuestas para el trabajo y el otro compañero deberá ir analizado esos comentarios para ver si es lo correcto o que se le puede cambiar o agregar y asi tener un buen trabajo. 
