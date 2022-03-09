@@ -28,7 +28,7 @@ if(primo){
 var bird = "tweet"
 printf("Estoy escribiendo un ${bird}tweet")
 ``` 
-### 4. Dada la variable var mensaje = "Hola Luke yo soy tu padre!" utiliza slice para extraer la secuencia "Luke"
+### 4. Given the variable var message = "Hello Luke I am your father!" uses slice to extract the "Luke" sequence
 ```
 var mensaje="Hola Luke yo soy tu padre!"
 mensaje slice(5,9)
@@ -36,11 +36,11 @@ mensaje slice(5,9)
 #### Result
 ![practica 2-4](https://user-images.githubusercontent.com/77422159/157133222-cf00b9ed-b4e1-44d3-92df-501182852d3b.PNG)
 
-### 5. Cúal es la diferencia entre value (val) y una variable (var) en scala?
+### 5. What is the difference between value (val) and a variable (var) in scala?
 val is a value that can not modificated is a value static
 var is a value taht can modificated and we can change for other values.
 
-### 6. Dada la tupla (2,4,5,1,2,3,3.1416,23) regresa el número 3.1416
+### 6. Given the tuple (2,4,5,1,2,3,3.1416,23) it returns the number 3.1416
 ```
 val tupla= (2,4,5,1,2,3,3.1416,23)
 tupla._7
