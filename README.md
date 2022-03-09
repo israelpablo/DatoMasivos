@@ -1,5 +1,7 @@
 
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/77422159/157056166-aa1ef8bd-fa1d-42c0-8846-860d0e81f54f.png">
+  </p>
 
 <h1 align="center"> Instituto Tecnológico de Tijuana </h1>
 <h3 align="center"> Subdirección académica departamento de sistemas y computación.</h3>
