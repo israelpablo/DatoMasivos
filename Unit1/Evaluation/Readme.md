@@ -137,3 +137,4 @@ val porcentajemes= meses.select($"Meses",$"Close").groupBy("Meses").mean()
 porcentajemes.select($"Meses",$"avg(Close)").show()
 ```
 #### Result:
+![evaluacion 11-5](https://user-images.githubusercontent.com/77422159/159497437-a62196f0-c7c6-42fa-9566-9f2154d06f4f.PNG)
