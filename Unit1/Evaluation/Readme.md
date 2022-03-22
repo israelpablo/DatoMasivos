@@ -73,3 +73,7 @@ from the netflix file we call the maximum and minimum value of the volume column
 
 ### c. ¿Cuál es la correlación de Pearson entre la columna “High” y la columna “Volumen”? 
 `netflix.select(corr($"High",$"Volume")).show()`
+
+### d. ¿Cuál es el máximo de la columna “High” por año? 
+`netflix.select(max($"High")).show()`
+
