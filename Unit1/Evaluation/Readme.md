@@ -130,7 +130,8 @@ porcentajeanios.select($"Anios",$"max(High)").show()
 ```
 #### Result:
 This is the results
-![evaluacion 11-4](https://user-images.githubusercontent.com/77422159/159494943-3107763f-42a7-49b9-beaa-2c169dc09505.PNG)
+
+![evaluacion 11-4](https://user-images.githubusercontent.com/77422159/159583339-90407422-20d0-4ed2-98da-56813e009d7d.PNG)
 
 
 ### e. ¿Cuál es el promedio de columna “Close” para cada mes del calendario? 
