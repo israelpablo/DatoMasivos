@@ -128,3 +128,12 @@ netflix.select(max($"High")).show()
 This is the results
 ![evaluacion 11-4](https://user-images.githubusercontent.com/77422159/159494943-3107763f-42a7-49b9-beaa-2c169dc09505.PNG)
 
+
+### e. ¿Cuál es el promedio de columna “Close” para cada mes del calendario? 
+This is different from all the others since we must obtain certain values ​​which need to be modified several times, such as adding a new column that stores the months and using methods such as obtaining the month, using the avg and grouping to obtain the desired result.
+```
+val meses = netflix.withColumn("Meses",month(netflix("Date")))
+val porcentajemes= meses.select($"Meses",$"Close").groupBy("Meses").mean()
+porcentajemes.select($"Meses",$"avg(Close)").show()
+```
+#### Result:
