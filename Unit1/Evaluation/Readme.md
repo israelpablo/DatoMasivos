@@ -68,4 +68,8 @@ from the netflix file we call the maximum and minimum value of the volume column
 ### 11. Con Sintaxis Scala/Spark $ conteste los siguiente: 
 ### a. ¿Cuántos días fue la columna “Close” inferior a $ 600? 
 `val result =netflix.filter($"Close" < 600 ).count()`
+### b. ¿Qué porcentaje del tiempo fue la columna “High” mayor que $ 500? 
+`val result = (netflix.filter( $"High" > 500).count()*1.0/netflix.count())*100`
 
+### c. ¿Cuál es la correlación de Pearson entre la columna “High” y la columna “Volumen”? 
+`netflix.select(corr($"High",$"Volume")).show()`
