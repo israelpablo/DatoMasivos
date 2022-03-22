@@ -4,6 +4,8 @@ spark-shell and immediately we import a library to be able to log in
 
 ```
 import org.apache.spark.sql.SparkSession 
+import spark.implicits._
+
 ```
 We declare the SparkSession variable and use the library to create a new session
 
@@ -122,7 +124,9 @@ This is the result for use the pearson correlation
 ### d. ¿What is the maximum of the “High” column per year? 
 In this case we need get a maximun so we use a funtion max for get the result
 ```
-netflix.select(max($"High")).show()
+val anios = netflix.withColumn("Anios",year(netflix("Date")))
+val porcentajeanios= anios.select($"Anios",$"High").groupBy("Anios").max()
+porcentajeanios.select($"Anios",$"max(High)").show()
 ```
 #### Result:
 This is the results
