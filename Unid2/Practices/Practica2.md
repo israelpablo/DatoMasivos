@@ -37,7 +37,10 @@ val featureIndexer = new VectorIndexer()
 
   ![practice 2 3](https://user-images.githubusercontent.com/77422159/166828358-f581b06c-10b0-47e8-ba87-9c31b00843ed.PNG)
 
-
+Add the next code for separed the data for  test and train 
+```
+val Array(trainingData, testData) = data.randomSplit(Array(0.7, 0.3))
+```
 ![practice 2 4](https://user-images.githubusercontent.com/77422159/166828560-65c58746-c09d-4672-a7ef-64cfd06c8771.PNG)
 
 on this section we make all feactures necesary for train model
