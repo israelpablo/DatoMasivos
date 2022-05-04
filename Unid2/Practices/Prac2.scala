@@ -3,6 +3,7 @@ import org.apache.spark.ml.classification.DecisionTreeClassificationModel
 import org.apache.spark.ml.classification.DecisionTreeClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer}
+import spark.implicits._
 
 // Load the data stored in LIBSVM format as a DataFrame.
 val data = spark.read.format("libsvm").load("c:/Spark/data/mllib/sample_libsvm_data.txt")
@@ -10,29 +11,29 @@ val data = spark.read.format("libsvm").load("c:/Spark/data/mllib/sample_libsvm_d
 // Index labels, adding metadata to the label column.
 // Fit on whole dataset to include all labels in index.
 val labelIndexer = new StringIndexer()
-  .setInputCol("label")
-  .setOutputCol("indexedLabel")
-  .fit(data)
+  labelIndexer.setInputCol("label")
+  labelIndexer.setOutputCol("indexedLabel")
+  labelIndexer.fit(data)
 // Automatically identify categorical features, and index them.
 val featureIndexer = new VectorIndexer()
-  .setInputCol("features")
-  .setOutputCol("indexedFeatures")
-  .setMaxCategories(4) // features with > 4 distinct values are treated as continuous.
-  .fit(data)
+  featureIndexer.setInputCol("features")
+  featureIndexer.setOutputCol("indexedFeatures")
+  featureIndexer.setMaxCategories(4) // features with > 4 distinct values are treated as continuous.
+  featureIndexer.fit(data)
 
 // Split the data into training and test sets (30% held out for testing).
 val Array(trainingData, testData) = data.randomSplit(Array(0.7, 0.3))
 
 // Train a DecisionTree model.
 val dt = new DecisionTreeClassifier()
-  .setLabelCol("indexedLabel")
-  .setFeaturesCol("indexedFeatures")
+  dt.setLabelCol("indexedLabel")
+  dt.setFeaturesCol("indexedFeatures")
 
 // Convert indexed labels back to original labels.
 val labelConverter = new IndexToString()
-  .setInputCol("prediction")
-  .setOutputCol("predictedLabel")
-  .setLabels(labelIndexer.labelsArray(0))
+  labelConverter.setInputCol("prediction")
+  labelConverter.setOutputCol("predictedLabel")
+  labelConverter.setLabels(labelIndexer.labelsArray(0))
 
 // Chain indexers and tree in a Pipeline.
 val pipeline = new Pipeline()
