@@ -9,7 +9,7 @@ import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer}
 
 ``` 
-#### Result
+
 
 On this step is necesary load the data for this step is necesary take the file "sample_libsvm_data.txt"
 ``` 
@@ -17,6 +17,8 @@ val data = spark.read.format("libsvm").load("C:/Spark/data/mllib/sample_libsvm_d
 
 ``` 
 #### Result
+![practice 2 1](https://user-images.githubusercontent.com/77422159/166828296-de20b2b1-70e4-4220-b050-15006e9a4e77.PNG)
+
 we need create labelindexer and featureIndexer, this is necesary for adding metadata an fit the dataset
 ```
 val labelIndexer = new StringIndexer()
@@ -28,14 +30,15 @@ val featureIndexer = new VectorIndexer()
   featureIndexer.setInputCol("features")
   featureIndexer.setOutputCol("indexedFeatures")
   featureIndexer.setMaxCategories(4) 
+   featureIndexer.fit(data)
   ```
   #### Result
-  the next step is fit data
-```
-  featureIndexer.fit(data)
-```
+  ![practice 2 2](https://user-images.githubusercontent.com/77422159/166828341-ee49524a-a267-48c0-9c20-f1c6be7f1066.PNG)
 
-#### Result
+  ![practice 2 3](https://user-images.githubusercontent.com/77422159/166828358-f581b06c-10b0-47e8-ba87-9c31b00843ed.PNG)
+
+
+![practice 2 4](https://user-images.githubusercontent.com/77422159/166828560-65c58746-c09d-4672-a7ef-64cfd06c8771.PNG)
 
 on this section we make all feactures necesary for train model
 ``` 
@@ -45,6 +48,8 @@ val dt = new DecisionTreeClassifier()
 
 ``` 
 #### Result
+![practice 2 5](https://user-images.githubusercontent.com/77422159/166828590-4e78dd22-507d-413c-81e9-956d1df784ca.PNG)
+
 now we convert indexed labels back to original
 ```
 val labelConverter = new IndexToString()
@@ -53,6 +58,8 @@ val labelConverter = new IndexToString()
   labelConverter.setLabels(labelIndexer.labels)
 ```
 #### Result
+![practice 2 6](https://user-images.githubusercontent.com/77422159/166828653-7897912c-46e4-4a8e-97b6-fd056fc54de4.PNG)
+
 now we change indexers and tree to pipeline
 ```
 val pipeline = new Pipeline()
