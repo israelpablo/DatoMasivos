@@ -13,7 +13,6 @@
 
 <h4 align="center"> Perez Ortega Victoria Valeria 18210718</h4>
 <h4 align="center"> Lopez Pablo Israel 17210585</h4>
-<h4 align="center"> Unidad 2</h4>
 
 
 <h1 align="center"> Indice </h1>
