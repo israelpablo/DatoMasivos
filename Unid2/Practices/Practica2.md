@@ -2,47 +2,86 @@
 
 On first step we need import the librery necesary for run the code.
 ``` 
-import org.apache.spark.mllib.tree.DecisionTree
-import org.apache.spark.mllib.tree.model.DecisionTreeModel
-import org.apache.spark.mllib.util.MLUtils
+import org.apache.spark.ml.Pipeline
+import org.apache.spark.ml.classification.DecisionTreeClassificationModel
+import org.apache.spark.ml.classification.DecisionTreeClassifier
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer}
+
 ``` 
 
 On this step is necesary load the data for this step is necesary take the file "sample_libsvm_data.txt"
 ``` 
-val data = MLUtils.loadLibSVMFile(sc, "data/mllib/sample_libsvm_data.txt")
+val data = spark.read.format("libsvm").load("C:/Spark/data/mllib/sample_libsvm_data.txt")
+
 ``` 
 
-// Split the data into training and test sets (30% held out for testing)
-after load the data we need trainig  for the next code we make that trainig, only 30% is ussing for testing
-``` 
-val splits = data.randomSplit(Array(0.7, 0.3))
-val (trainingData, testData) = (splits(0), splits(1))
-``` 
+we need create labelindexer and featureIndexer, this is necesary for adding metadata an fit the dataset
+```
+val labelIndexer = new StringIndexer()
+  labelIndexer.setInputCol("label")
+  labelIndexer.setOutputCol("indexedLabel")
+  labelIndexer.fit(data)
+
+val featureIndexer = new VectorIndexer()
+  featureIndexer.setInputCol("features")
+  featureIndexer.setOutputCol("indexedFeatures")
+  featureIndexer.setMaxCategories(4) 
+  ```
+  the next step is fit data
+```
+  featureIndexer.fit(data)
+```
+
+
 
 on this section we make all feactures necesary for train model
 ``` 
-val numClasses = 2
-val categoricalFeaturesInfo = Map[Int, Int]()
-val impurity = "gini"
-val maxDepth = 5
-val maxBins = 32
+val dt = new DecisionTreeClassifier()
+  dt.setLabelCol("indexedLabel")
+  dt.setFeaturesCol("indexedFeatures")
 
-val model = DecisionTree.trainClassifier(trainingData, numClasses, categoricalFeaturesInfo,
-  impurity, maxDepth, maxBins)
 ``` 
-// Evaluate model on test instances and compute test error
-``` 
-val labelAndPreds = testData.map { point =>
-  val prediction = model.predict(point.features)
-  (point.label, prediction)
-}
-``` 
-val testErr = labelAndPreds.filter(r => r._1 != r._2).count().toDouble / testData.count()
-println(s"Test Error = $testErr")
-println(s"Learned classification tree model:\n ${model.toDebugString}")
-``` 
-// Save and load model
-``` 
-model.save(sc, "target/tmp/myDecisionTreeClassificationModel")
-val sameModel = DecisionTreeModel.load(sc, "target/tmp/myDecisionTreeClassificationModel")
-``` 
+now we convert indexed labels back to original
+```
+val labelConverter = new IndexToString()
+  labelConverter.setInputCol("prediction")
+  labelConverter.setOutputCol("predictedLabel")
+  labelConverter.setLabels(labelIndexer.labels)
+```
+now we change indexers and tree to pipeline
+```
+val pipeline = new Pipeline()
+  pipeline.setStages(Array(labelIndexer, featureIndexer, dt, labelConverter))
+
+```
+Now is necesary train the model
+```
+val model = pipeline.fit(trainingData)
+```
+we make predictions
+```
+val predictions = model.transform(testData)
+```
+On this section we show 5 rows
+```
+predictions.select("predictedLabel", "label", "features").show(5)
+```
+
+this last codes is select an compute test error
+```
+val evaluator = new MulticlassClassificationEvaluator()
+  .setLabelCol("indexedLabel")
+  .setPredictionCol("prediction")
+  .setMetricName("accuracy")
+val accuracy = evaluator.evaluate(predictions)
+println(s"Test Error = ${(1.0 - accuracy)}")
+
+val treeModel = model.stages(2).asInstanceOf[DecisionTreeClassificationModel]
+println(s"Learned classification tree model:\n ${treeModel.toDebugString}")
+```
+
+
+#### Result
+
+
