@@ -1,0 +1,183 @@
+2022.05.02 14:05:26 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.05.02 14:05:28 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.05.02 14:05:28 INFO  Started: Metals version 0.11.5 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.66.0.
+2022.05.02 14:05:28 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.05.02 14:05:29 INFO  time: initialize in 0.88s
+2022.05.02 14:05:29 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.02 14:05:31 WARN  Build server is not auto-connectable.
+2022.05.02 14:05:31 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.05.02 14:05:31 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+2022.05.02 14:05:32 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+may 02, 2022 2:05:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(Unknown Source)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(Unknown Source)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:398)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1853)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.05.02 14:05:43 INFO  no build target found for C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.02 14:05:46 INFO  time: code lens generation in 13s
+2022.05.02 14:50:29 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+2022.05.02 14:50:36 INFO  shutting down Metals
+2022.05.03 23:00:03 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.05.03 23:00:12 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.05.03 23:00:12 INFO  Started: Metals version 0.11.5 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.66.0.
+2022.05.03 23:00:12 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.05.03 23:00:13 INFO  time: initialize in 1.15s
+2022.05.03 23:00:16 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.03 23:00:16 WARN  Build server is not auto-connectable.
+2022.05.03 23:00:16 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.05.03 23:00:17 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+2022.05.03 23:00:29 INFO  no build target found for C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala. Using presentation compiler with project's scala-library version: 3.1.2
+may 03, 2022 11:00:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 16
+may 03, 2022 11:00:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 17
+2022.05.03 23:00:45 INFO  time: code lens generation in 5.38s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 14s
+2022.05.03 23:00:45 INFO  time: code lens generation in 27s
+2022.05.03 23:06:25 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+may 03, 2022 11:06:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(Unknown Source)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(Unknown Source)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:398)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1853)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.05.03 23:06:54 INFO  shutting down Metals
+2022.05.04 19:08:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.05.04 19:08:36 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.05.04 19:08:36 INFO  Started: Metals version 0.11.5 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.66.0.
+2022.05.04 19:08:36 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.05.04 19:08:37 INFO  time: initialize in 1.7s
+2022.05.04 19:08:45 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.04 19:08:45 WARN  Build server is not auto-connectable.
+2022.05.04 19:08:45 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.05.04 19:08:46 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+2022.05.04 19:08:56 INFO  no build target found for C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.04 19:09:04 INFO  time: code lens generation in 6.88s
+2022.05.04 19:09:04 INFO  time: code lens generation in 13s
+2022.05.04 19:09:04 INFO  time: code lens generation in 4.2s
+2022.05.04 19:09:16 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+2022.05.04 19:09:16 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+may 04, 2022 7:09:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(Unknown Source)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(Unknown Source)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:398)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1853)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.05.04 19:09:27 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+may 04, 2022 7:09:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(Unknown Source)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(Unknown Source)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:398)
+	at scala.meta.internal.metals.MetalsLanguageServer.executeCommand(MetalsLanguageServer.scala:1853)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2022.05.04 19:28:33 INFO  shutting down Metals
