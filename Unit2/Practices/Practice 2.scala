@@ -3,7 +3,9 @@ import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.DecisionTreeClassificationModel
 import org.apache.spark.ml.classification.DecisionTreeClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
-import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer}
+import org.apache.spark.ml.feature.IndexToString
+import org.apache.spark.ml.feature.StringIndexer
+import org.apache.spark.ml.feature.VectorIndexer
 import spark.implicits._
 import org.apache.spark.ml.feature.Normalizer
 // Load the data stored in LIBSVM format as a DataFrame.
@@ -30,6 +32,7 @@ val dt = new DecisionTreeClassifier()
   dt.setLabelCol("indexedLabel")
   dt.setFeaturesCol("indexedFeatures")
 
+val dawe=labelIndexer.getOutputcol
 // Convert indexed labels back to original labels.
 val labelConverter = new IndexToString()
   labelConverter.setInputCol("prediction")
