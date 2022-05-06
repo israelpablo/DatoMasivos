@@ -54,6 +54,7 @@ object RandomForestClassifierExample {
       featureIndexer.setInputCol("features")
       featureIndexer.setOutputCol("indexedFeatures")
       featureIndexer.setMaxCategories(4)
+     featureIndexer.setHandleInvalid("skip")
       featureIndexer.fit(data)
 
    // Split the data into training and test sets (30% held out for testing).
@@ -88,9 +89,9 @@ object RandomForestClassifierExample {
 
     // Select (prediction, true label) and compute test error.
     val evaluator = new MulticlassClassificationEvaluator()
-      .setLabelCol("indexedLabel")
-      .setPredictionCol("prediction")
-      .setMetricName("accuracy")
+      evaluator.setLabelCol("indexedLabel")
+      evaluator.setPredictionCol("prediction")
+      evaluator.setMetricName("accuracy")
     val accuracy = evaluator.evaluate(predictions)
     println(s"Test Error = ${(1.0 - accuracy)}")
 
