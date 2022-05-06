@@ -21,6 +21,8 @@
 ## Practices
 ### [Practice  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica1.md)
 ### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica2.md)
+### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica3.md)
+
 ## Research
 ### 
 ###  
