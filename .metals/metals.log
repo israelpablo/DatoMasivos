@@ -732,3 +732,4 @@ Caused by: java.lang.IllegalArgumentException: 8 is not a valid line number, all
 2022.05.17 15:45:33 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice 2.scala
 2022.05.17 15:45:35 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice1.scala
 2022.05.17 15:45:40 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Practices\Practice 5.scala
+2022.05.17 16:03:41 INFO  shutting down Metals
