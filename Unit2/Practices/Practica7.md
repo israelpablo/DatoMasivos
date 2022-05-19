@@ -22,7 +22,18 @@ We can show the rows count and we can access for that information use the next c
 println ("Numero de lineas en el archivo de datos:" + data.count())
 ```
 ### Result
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%201.PNG)
 
+
+If some one need check the values you can use the next code.
+
+
+```
+data.show()
+```
+### Result
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%202.PNG)
 Now is necessary create our arrays one is for training and the other one is for testdata for that is necessary add this code.
 
 ```
@@ -42,6 +53,8 @@ predictions.show()
 ```
 
 ### Result
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%203.PNG)
 
 Now is necessary create the prediction on the model
 
@@ -64,3 +77,4 @@ println ("tasa de error =" + (1-precision))
 with this we are finish the process
 
 ### Result
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%204.PNG)
