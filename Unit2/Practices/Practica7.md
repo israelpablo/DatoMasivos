@@ -1,6 +1,7 @@
 ## Practice 7
 
-this a practice we need import the necesary complements on this case we need add the libraey necessary.
+this a practice we need to import the necessary complements in this case we need add the library necessary.
+
 
 ```
 
@@ -11,6 +12,7 @@ import org.apache.spark.sql.SparkSession
 ```
 
 Now we need add the data for create the function of naive bayes
+
 
 ```
 val data = spark.read.format("libsvm").load("c:/Spark/data/mllib/sample_libsvm_data.txt")
@@ -25,7 +27,7 @@ println ("Numero de lineas en el archivo de datos:" + data.count())
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%201.PNG)
 
 
-If some one need check the values you can use the next code.
+If someone needs to check the values you can use the next code.
 
 
 ```
@@ -34,7 +36,8 @@ data.show()
 ### Result
 
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Practices/Result%202.PNG)
-Now is necessary create our arrays one is for training and the other one is for testdata for that is necessary add this code.
+
+Now it is necessary to create our arrays one is for training and the other one is for test data for that is necessary add this code.
 
 ```
 val Array (trainingData, testData) = data.randomSplit (Array (0.7, 0.3), 100L)
