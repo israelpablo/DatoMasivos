@@ -14,3 +14,18 @@ datairis.printSchema()
 
 4. Mandamos a imprimir las primeras 5 columnas
 datairis.show()
+
+5. use the method describe() to learn more about the data in the DataFrame.
+```
+datairis.describe()
+```
+### Result
+
+6. Make the pertinent transformation for the categorical data which will be our labels to classify.
+```
+```
+### Result
+
+7. Build the classification model and explain its architecture.
+
+8. Print the model results.
