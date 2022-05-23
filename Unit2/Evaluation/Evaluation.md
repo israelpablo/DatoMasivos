@@ -6,6 +6,9 @@ import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer, VectorAssembler}
 
+      
+
+
 2. Se imprime el valor de las columnas
 println(datairis.columns.toSeq)
 
@@ -22,42 +25,101 @@ datairis.describe()
 ### Result
 
 6. Make the pertinent transformation for the categorical data which will be our labels to classify.
-```
-// Split the data into train and test  Divide los datos
-val splits = data.randomSplit(Array(0.6, 0.4), seed = 1234L)
-val train = splits(0)
-val test = splits(1)
 
-// specify layers for the neural network:  especificar capas para la red neuronal:
-// input layer of size 4 (features), two intermediate of size 5 and 4  capa de entrada de tamano 4 (features), dos intermedias de tamano 5 y 4
-// and output of size 3 (classes)  y salida de tamano 3 (classes) 
+
+
+For this csv is necessary add this libraries.
+```
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.IntegerType
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
+import org.apache.spark.ml.feature.StringIndexer 
+import org.apache.spark.ml.feature.VectorAssembler
+```
+we need add Error level code
+```
+import org.apache.log4j._
+Logger.getLogger("org").setLevel(Level.ERROR)
+```
+start the Spark session.
+```
+val spark = SparkSession.builder.appName("MultilayerPerceptron").getOrCreate()
+```
+now we need add the csv
+```
+val datairis = spark.read.option("header","true").
+option("inferSchema","true").
+format("csv").
+load("C:/Users/ilopez/Desktop/Data/datos masivos 05042022/DatoMasivos/Unit2/Evaluation/iris.csv")
+```
+
+in order to correctly manipulate the data inside the CSV, it is necessary to create index
+```
+val labelIndexer = new StringIndexer().setInputCol("species").setOutputCol("indexedLabel").fit(datairis)
+val indexed = labelIndexer.transform(datairis).drop("species").withColumnRenamed("indexedLabel", "label")
+```
+Now we need create the vector of the numeric category columns.
+```
+val vectorFeatures = (new VectorAssembler().setInputCols(Array("sepal_length","sepal_width","petal_length","petal_width")).setOutputCol("features"))
+```
+
+Now is necessart transform the indexed value.
+```
+val features = vectorFeatures.transform(indexed)
+```
+we need fitting indexed and finding labels 0 and 1.
+```
+val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(indexed)
+```
+
+Now we need splitting the data in 70% and 30%.
+
+```
+val splits = features.randomSplit(Array(0.7, 0.3))
+val trainingData = splits(0)
+val testData = splits(1)
+```
+
+we create the layers array.
+```
 val layers = Array[Int](4, 5, 4, 3)
 ```
-### Result
 
 7. Build the classification model and explain its architecture.
+now we need create the trainer  with the parameters
+we need add the layers is the values create before
+
+we create the Multilayer Perceptron object of the Multilayer Perceptron Classifier.
+```
+val multilayerP = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)  
+```
+Now fitting trainingData into the model
+```
+val model = multilayerP.fit(trainingData)
+```
+
+Now we Transform the testData for the predictions.
+```
+val prediction = model.transform(testData)
+```
+the next step is necessary select the prediction and label columns.
+```
+val predictionAndLabels = prediction.select("prediction", "label")
+```
+
+Now we Create a Multiclass Classification Evaluator object.
 
 ```
-// create the trainer and set its parameters  Crea el trainer y establece sus parametros.
-val trainer = new MultilayerPerceptronClassifier()
-  .setLayers(layers)
-  .setBlockSize(128)
-  .setSeed(1234L)
-  .setMaxIter(100)
-
-// train the model  entrena el model
-val model = trainer.fit(train)
-
-// compute accuracy on the test set  precision de calculo en el conjunto de prueba
-val result = model.transform(test)
-val predictionAndLabels = result.select("prediction", "label")
-val evaluator = new MulticlassClassificationEvaluator()
-  .setMetricName("accuracy")
-
-
+val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
 ```
+
+ 
 
 8. Print the model results.
+
+The finaly step is necessary print the result 
 ```
-println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
+println(s"Accuracy: ${evaluator.evaluate(predictionAndLabels)}")
+println(s"Test Error: ${1.0 - evaluator.evaluate(predictionAndLabels)}")
 ```
