@@ -2,23 +2,40 @@
 
 val datairis = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/valer/Documents/GitHub/DatoMasivos/Unit2/Evaluation")
 
-![img]("C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Evaluation\Cargar dataframe.png")
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/Cargar%20dataframe.png)
+
 1a. Importacion de librerias 
+
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer, VectorAssembler}
 
-      
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/Importar%20libreria.png)
+    
 
 
 2. Se imprime el valor de las columnas
+
 println(datairis.columns.toSeq)
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/Columnas%20.png)
+
+
 3. Se imprime el esquema 
+
 datairis.printSchema()
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/Schema.png)
+
+
+
 4. Mandamos a imprimir las primeras 5 columnas
+
 datairis.show()
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/5%20columnas.png)
+
+
 
 5. use the method describe() to learn more about the data in the DataFrame.
 ```
