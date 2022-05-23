@@ -23,6 +23,7 @@ datairis.show()
 datairis.describe()
 ```
 ### Result
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/Parte%205%20.PNG)
 
 6. Make the pertinent transformation for the categorical data which will be our labels to classify.
 
@@ -53,17 +54,20 @@ option("inferSchema","true").
 format("csv").
 load("C:/Users/ilopez/Desktop/Data/datos masivos 05042022/DatoMasivos/Unit2/Evaluation/iris.csv")
 ```
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/6-1.PNG)
 
 in order to correctly manipulate the data inside the CSV, it is necessary to create index
 ```
 val labelIndexer = new StringIndexer().setInputCol("species").setOutputCol("indexedLabel").fit(datairis)
 val indexed = labelIndexer.transform(datairis).drop("species").withColumnRenamed("indexedLabel", "label")
 ```
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/6-2.PNG)
 Now we need create the vector of the numeric category columns.
 ```
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("sepal_length","sepal_width","petal_length","petal_width")).setOutputCol("features"))
 ```
-
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/6-3.PNG)
 Now is necessart transform the indexed value.
 ```
 val features = vectorFeatures.transform(indexed)
@@ -85,6 +89,7 @@ we create the layers array.
 ```
 val layers = Array[Int](4, 5, 4, 3)
 ```
+![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/6-4.PNG)
 
 7. Build the classification model and explain its architecture.
 now we need create the trainer  with the parameters
@@ -114,7 +119,7 @@ Now we Create a Multiclass Classification Evaluator object.
 val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
 ```
 
- 
+ ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/7.PNG)
 
 8. Print the model results.
 
@@ -123,3 +128,5 @@ The finaly step is necessary print the result
 println(s"Accuracy: ${evaluator.evaluate(predictionAndLabels)}")
 println(s"Test Error: ${1.0 - evaluator.evaluate(predictionAndLabels)}")
 ```
+
+ ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2/Evaluation/8.PNG)
