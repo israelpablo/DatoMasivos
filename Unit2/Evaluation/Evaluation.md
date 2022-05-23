@@ -1,6 +1,8 @@
 1. Se carga el dataframe iris.csv
+
 val datairis = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/valer/Documents/GitHub/DatoMasivos/Unit2/Evaluation")
 
+![img]("C:\Users\valer\Documents\GitHub\DatoMasivos\Unit2\Evaluation\Cargar dataframe.png")
 1a. Importacion de librerias 
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
