@@ -10,14 +10,27 @@
 <h4 align="center"> JOSE CHRISTIAN ROMERO HERNANDEZ.</h4>
 
 
-
+<h4 align="center"> Unidad 2</h4>
 <h4 align="center"> Perez Ortega Victoria Valeria 18210718</h4>
 <h4 align="center"> Lopez Pablo Israel 17210585</h4>
 
 
+
 <h1 align="center"> Indice </h1>
 
+## Practices
+### [Practice  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica1.md)
+### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica2.md)
+### [Practice  #3](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica3.md)
 
-
-###  [Unit 2 #1](https://github.com/israelpablo/DatoMasivos/blob/Unit2/Unit2)
-
+### [Practice  #4](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practice4.md)
+### [Practice  #5](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practice5.md)
+### [Practice  #7](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica7.md)
+## Research
+### 
+###  
+## Homework
+### [Homework  #]
+### 
+## Evaluation
+### [Evaluation practice]
