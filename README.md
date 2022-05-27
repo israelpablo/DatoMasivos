@@ -19,13 +19,12 @@
 <h1 align="center"> Indice </h1>
 
 ## Practices
-### [Practice  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica1.md)
-### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica2.md)
-### [Practice  #3](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica3.md)
-
-### [Practice  #4](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practice4.md)
-### [Practice  #5](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practice5.md)
-### [Practice  #7](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unid2/Practices/Practica7.md)
+### [Practice  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica1.md)
+### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica2.md)
+### [Practice  #3](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica3.md)
+### [Practice  #4](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practice4.md)
+### [Practice  #5](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practice5.md)
+### [Practice  #7](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica7.md)
 ## Research
 ### 
 ###  
