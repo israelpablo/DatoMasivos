@@ -28,13 +28,14 @@ val session = SparkSession.builder().getOrCreate()
 4. Import the Kmeans library for the clustering algorithm.
 
 import org.apache.spark.ml.clustering.Kmeans
-
+import org.apache.spark.ml.evaluation.ClusteringEvaluator
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit3/Unit3/Evaluation/library.png)
 
 5. Load the Wholesale Customer Dataset
 
 Cargamos el archivo de Wholesale_customers_data
-val Wholesaledata=spark.read.option("header","true").option("inferSchema","true")csv("C:/Users/valer/Documents/9no Semestre/Datos Masivos/Unit 3/Wholesale_customers_data.csv")
+val Wholesaledata=spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/ilopez/Desktop/Data/datas/DatoMasivos/Unit3/Evaluation/Wholesale_customers_data.csv")
+
 
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit3/Unit3/Evaluation/cargar%20dataset.png)
 
@@ -42,6 +43,41 @@ val Wholesaledata=spark.read.option("header","true").option("inferSchema","true"
 
 Detergents Paper, Delicassen and call this set feature data
 
-val feature_data = (Wholesaledata.select($"Fresh",$"Milk",$"Grocery",$"Frozen",$"Detergents_Paper",$"Delicassen"))
+val feature_data = Wholesaledata.select("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")
+
 
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit3/Unit3/Evaluation/feature_data.png)
+
+7. Importar Vector Assembler y Vector 
+
+```
+import org.apache.spark.ml.feature.VectorAssembler
+
+```
+
+8. Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un conjunto de entrada, recordando que no hay etiquetas 
+
+```
+
+
+val vectorFeatures = (new VectorAssembler().setInputCols(Array("Fresh","Milk", "Grocery","Frozen","Detergents_Paper","Delicassen")).setOutputCol("features"))
+
+```
+9. Utilice el objeto assembler para transformar feature_data 
+
+```
+val features = vectorFeatures.transform(feature_data)
+```
+10. Crear un modelo Kmeans con K=3 
+```
+val kmeans = new KMeans().setK(3).setSeed(1L)
+val model = kmeans.fit(features)
+
+```
+11. Evalúe los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los  centroides.
+
+```
+val WSSSE = model.computeCost(features)
+println(s"Within set sum of Squared Errors = $WSSSE")
+
+```
