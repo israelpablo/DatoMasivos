@@ -48,14 +48,14 @@ val feature_data = Wholesaledata.select("Fresh", "Milk", "Grocery", "Frozen", "D
 
 ![img](https://github.com/israelpablo/DatoMasivos/blob/Unit3/Unit3/Evaluation/feature_data.png)
 
-7. Importar Vector Assembler y Vector 
+7. Import Vector Assembler and Vector
 
 ```
 import org.apache.spark.ml.feature.VectorAssembler
 
 ```
 
-8. Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un conjunto de entrada, recordando que no hay etiquetas 
+8. Create a new Vector Assembler object for the feature columns as an input set, remembering that there are no labels
 
 ```
 
@@ -63,18 +63,18 @@ import org.apache.spark.ml.feature.VectorAssembler
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("Fresh","Milk", "Grocery","Frozen","Detergents_Paper","Delicassen")).setOutputCol("features"))
 
 ```
-9. Utilice el objeto assembler para transformar feature_data 
+9. Use the assembler object to transform feature_data
 
 ```
 val features = vectorFeatures.transform(feature_data)
 ```
-10. Crear un modelo Kmeans con K=3 
+10. Create a Kmeans model with K=3
 ```
 val kmeans = new KMeans().setK(3).setSeed(1L)
 val model = kmeans.fit(features)
 
 ```
-11. Evalúe los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los  centroides.
+11. Evaluate the clusters using Within Set Sum of Squared Errors WSSSE and print the centroids.
 
 ```
 val WSSSE = model.computeCost(features)
