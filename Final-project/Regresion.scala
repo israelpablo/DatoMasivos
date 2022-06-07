@@ -14,7 +14,7 @@ Logger.getLogger("org").setLevel(Level.ERROR)
 val spark = SparkSession.builder.appName("LogisticRegression").getOrCreate()
 
 //we load the csv file.
-val bank  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("bank-additional-full.csv")
+val bank  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Users/valer/Documents/9no Semestre/Datos Masivos/Unit 4")
 
 //now we need check the information for that we need add the next code
 bank.show
