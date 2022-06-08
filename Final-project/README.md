@@ -38,7 +38,7 @@ we add error level code.
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 ```
-we start spark session.
+We started a spark session.
 ```
 val spark = SparkSession.builder.appName("MultilayerPerceptron").getOrCreate()
 ```
@@ -50,7 +50,7 @@ now we need check the information for that we need add the next code
 ```
 bank.show
 ```
-show the name of columms for verify 
+show the name of columns for verify
 ```
 bank.columns
 ```
@@ -64,12 +64,12 @@ we add the vector of the numeric category columns.
 ```
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
 ```
-Now we nedd transforming the indexed value.
+Now we need to transform the indexed value.
 ```
 val features = vectorFeatures.transform(indexed)
 ```
 
-now is necessary fitting indexed and finding labels 0 and 1.
+now it is necessary to fit indexes and find labels 0 and 1.
 ```
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(indexed)
 ```
@@ -90,17 +90,17 @@ val trainingData = splits(0)
 val testData = splits(1)
 ```
 
-we creating the layers array.
+We created the layers array.
 ```
 val layers = Array[Int](5, 4, 1, 2)
 ```
 
-now is necessay create the Multilayer Perceptron object of the Multilayer Perceptron Classifier.
+now it is necessary to create the Multilayer Perceptron object of the Multilayer Perceptron Classifier.
 ```
 val multilayerP = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)  
 ```
 
-now is necessary fitting trainingData into the model.
+Now it is necessary to fit trainingData into the model.
 ```
 val model = multilayerP.fit(trainingData)
 ```
@@ -109,12 +109,12 @@ Transforming the testData for the predictions.
 val prediction = model.transform(testData)
 ```
 
-Now is necessary select the prediction and label columns.
+Now it is necessary to select the prediction and label columns.
 ```
 val predictionAndLabels = prediction.select("prediction", "label")
 ```
 
-we created a Multiclass Classification Evaluator object.
+We created a Multiclass Classification Evaluator object.
 ```
 val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
 ```
@@ -124,7 +124,7 @@ val endTimeMillis = System.currentTimeMillis()
 val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 ```
 
-We are printing the all results.
+We are printing all the results.
 ```
 println("|"+i + "|"+evaluator.evaluate(predictionAndLabels) +"|"+ (1.0 - evaluator.evaluate(predictionAndLabels))+"|" +durationSeconds + "|")
 
@@ -186,7 +186,7 @@ we add error level code.
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 ```
-we start spark session.
+We started a spark session.
 ```
 val spark = SparkSession.builder.appName("LogisticRegression").getOrCreate()
 ```
@@ -211,15 +211,15 @@ we add the vector of the numeric category columns.
 ```
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
 ```
-Now we nedd transforming the indexed value.
+Now we need to transform the indexed value.
 ```
 val features = vectorFeatures.transform(indexed)
 ```
-Renaming the column y as label.
+Renaming the column y as a label.
 ```
 val featuresLabel = features.withColumnRenamed("y", "label")
 ```
-now we union of label and features as dataIndexed.
+now we union of labels and features as dataIndexed.
 ```
 val dataIndexed = featuresLabel.select("label","features")
 ```
@@ -232,7 +232,7 @@ We start timer
 ```
 val startTimeMillis = System.currentTimeMillis()
 ```
-now is necessary separeted the values and we splitting the data in 70% and 30%.
+now it is necessary to separate the values and we split the data in 70% and 30%.
 ```
 val Array(trainingData, testData) = dataIndexed.randomSplit(Array(0.7, 0.3))
 ```
@@ -325,7 +325,7 @@ Now we need import also the librarie for errors
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 ```
-Creating a spark session named SVM
+Creating a spark session 
 ```
 val spark = SparkSession.builder.appName("SVM").getOrCreate()
 ```
@@ -350,19 +350,19 @@ we add the vector of the numeric category columns.
 ```
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("duration","pdays","previous")).setOutputCol("features"))
 ```
-Now we nedd transforming the indexed value.
+Now we need to transform the indexed value.
 ```
 val features = vectorFeatures.transform(indexed)
 ```
-we renaming the column "y" as label.
+we rename the column "y" as a label.
 ```
 val featuresLabel = features.withColumnRenamed("y", "label")
 ```
-now we union of label and features as dataIndexed.
+now we union of labels and features as dataIndexed.
 ```
 val dataIndexed = featuresLabel.select("label","features")
 ```
-we create of labelIndexer and featureIndexer for the pipeline, Where 
+we create of labelIndexer and featureIndexer for the pipeline
 ```
 features with distinct values > 4, are treated as continuous.
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(dataIndexed)
@@ -378,16 +378,16 @@ We start timer
 ```
 val startTimeMillis = System.currentTimeMillis()
 ```
-now is necessary separeted the values and we splitting the data in 70% and 30%.
+now it is necessary to separate the values and we split the data in 70% and 30%.
 ```
 val Array(training, test) = dataIndexed.randomSplit(Array(0.7, 0.3))
 ```
-now is necessay create the object Linear Vector Machine.
+now it is necessary to create the object Linear Vector Machine.
 
 ```
 val supportVM = new LinearSVC().setMaxIter(10).setRegParam(0.1)
 ```    
-now is necessary fitting trainingData into the model.
+Now it is necessary to fit trainingData into the model.
 ```
 val model = supportVM.fit(training)
 ```
@@ -411,7 +411,7 @@ val endTimeMillis = System.currentTimeMillis()
 val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 ```
 
-We are printing the all results.
+We are printing all the results.
 ```
 println("|"+i + "|"+ metrics.accuracy +"|"+ (1.0 - metrics.accuracy)+"|" +durationSeconds + "|")
 
@@ -474,7 +474,7 @@ we add error level code.
 import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 ```
-we start spark session.
+We started a spark session.
 ```
 val spark = SparkSession.builder.appName("DecisionTree").getOrCreate()
 ```
@@ -499,19 +499,19 @@ we add the vector of the numeric category columns.
 ```
 val vectorFeatures = (new VectorAssembler().setInputCols(Array("balance","day","duration","pdays","previous")).setOutputCol("features"))
 ```
-Now we nedd transforming the indexed value.
+Now we need to transform the indexed value.
 ```
 val features = vectorFeatures.transform(indexed)
 ```
-Renaming the column y as label.
+Renaming the column y as a label.
 ```
 val featuresLabel = features.withColumnRenamed("y", "label")
 ```
-now is necessary union of label and features as dataIndexed.
+now it is necessary to union the labels and features as dataIndexed.
 ```
 val dataIndexed = featuresLabel.select("label","features")
 ```
-now is necessary created of labelIndexer and featureIndexer for the pipeline, Where features with distinct values > 4, are treated as continuous.
+now it is necessary to create a labelIndexer and featureIndexer for the pipeline, Where features with distinct values > 4, are treated as continuous.
 ```
 val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(dataIndexed)
 val featureIndexer = new VectorIndexer().setInputCol("features").setOutputCol("indexedFeatures").setMaxCategories(4).fit(dataIndexed)
@@ -530,31 +530,31 @@ now is necessary separeted the values and we splitting the data in 70% and 30%.
 ```
 val Array(training, test) = dataIndexed.randomSplit(Array(0.7, 0.3))
 ```
-we creat the Decision Tree object.
+we create the Decision Tree object.
 ```
 val decisionTree = new DecisionTreeClassifier().setLabelCol("indexedLabel").setFeaturesCol("indexedFeatures")
 ```
-we creat the Index to String object.
+we create the Index to String object.
 ```
 val labelConverter = new IndexToString().setInputCol("prediction").setOutputCol("predictedLabel").setLabels(labelIndexer.labels)
 ```
-we creating the pipeline with the objects created before.
+we created the pipeline with the objects created before.
 ```
 val pipeline = new Pipeline().setStages(Array(labelIndexer, featureIndexer, decisionTree, labelConverter))
 ```
-we need fitting the model with training data.
+We need to fit the model with training data.
 ```
 val model = pipeline.fit(training)
 ```
-we making the predictions transforming the testData.
+we make the predictions transforming the testData.
 ```
 val predictions = model.transform(test)
 ```
-we need Creati the evaluator.
+We need Create an evaluator.
 ```
 val evaluator = new MulticlassClassificationEvaluator().setLabelCol("indexedLabel").setPredictionCol("prediction").setMetricName("accuracy")
 ```
-now is necessary add the Accuracy.
+Now it is necessary to add the Accuracy.
 ```
 val accuracy = evaluator.evaluate(predictions)
 ```
