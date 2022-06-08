@@ -603,4 +603,18 @@ println("|"+i + "|"+accuracy +"|"+ (1.0 - accuracy) +"|" +durationSeconds + "|")
 |28|0.8956344289774798|0.1043655710225202|1|
 |29|0.8936716286573293|0.1063283713426707|1|
 |30|0.8879615952732643|0.11203840472673565|1|
+
 [Codigo Completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Tree.scala)
+
+
+## Comparison between the models
+
+|Model| Average Accuracy |  Average Test Error|  Average Duration cycle by seconds |
+|-----|---------|----------|----------------|
+|Multilayer Perceptron| 0.88333777|	0.11666223|	6.466666667|
+|Logistic Regression| 15.5	0.882768719|	0.117231281|	1|
+|SVM| 15.5	0.883127415|	0.116872585|	13.96666667	|
+|Decision Tree|15.5	0.892554255	|0.107445745|	1|
+											 		
+
+
