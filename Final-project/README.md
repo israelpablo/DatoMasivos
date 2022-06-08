@@ -618,3 +618,5 @@ println("|"+i + "|"+accuracy +"|"+ (1.0 - accuracy) +"|" +durationSeconds + "|")
 											 		
 ## Conclutions
 
+Israel: For the implementation of these models it is necessary to carry out the corresponding data treatment, for which reason one must work hard to obtain the desired results, since if the data is not treated correctly it usually happens that the results will not be the desired ones.
+Regarding the models seen in this final project, the one I see with the best performance would be the multilayer, since although the speed at which it makes the prediction is a bit slow, its error rate and its precision are good enough, this results in confidence better to the result
