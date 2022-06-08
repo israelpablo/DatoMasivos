@@ -4499,3 +4499,37 @@ ADVERTENCIA: Unmatched cancel notification for request id 19
 2022.06.07 16:25:03 INFO  time: code lens generation in 5.5s
 2022.06.07 16:46:24 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Final-project\Regresion.scala
 2022.06.07 16:46:26 INFO  shutting down Metals
+2022.06.07 17:12:02 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.06.07 17:12:02 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.06.07 17:12:02 INFO  Started: Metals version 0.11.6 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.67.2.
+2022.06.07 17:12:02 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.06.07 17:12:03 INFO  time: initialize in 0.24s
+2022.06.07 17:12:03 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.07 17:12:03 WARN  Build server is not auto-connectable.
+2022.06.07 17:12:03 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.07 17:14:03 INFO  shutting down Metals
+2022.06.08 14:45:08 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.06.08 14:45:10 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.06.08 14:45:10 INFO  Started: Metals version 0.11.6 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.67.2.
+2022.06.08 14:45:10 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.06.08 14:45:10 INFO  time: initialize in 0.25s
+2022.06.08 14:45:10 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.08 14:45:10 WARN  Build server is not auto-connectable.
+2022.06.08 14:45:10 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.08 14:45:11 WARN  no build target for: C:\Users\valer\Documents\GitHub\DatoMasivos\Final-project\Regresion.scala
+2022.06.08 14:45:14 INFO  no build target found for C:\Users\valer\Documents\GitHub\DatoMasivos\Final-project\Regresion.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.08 14:45:17 INFO  time: code lens generation in 5.42s
+jun 08, 2022 2:47:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 64
+jun 08, 2022 3:05:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 162
+2022.06.08 15:49:21 INFO  shutting down Metals
+2022.06.08 15:51:01 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\valer\Documents\GitHub\DatoMasivos\.metals\lsp.trace.json or C:\Users\valer\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.06.08 15:51:07 INFO  logging to file C:\Users\valer\Documents\GitHub\DatoMasivos\.metals\metals.log
+2022.06.08 15:51:07 INFO  Started: Metals version 0.11.6 in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos' for client Visual Studio Code 1.67.2.
+2022.06.08 15:51:07 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(8)), jdkHome: C:\Program Files\Java\jre1.8.0_321, javac exists: false)
+2022.06.08 15:51:07 INFO  time: initialize in 0.66s
+2022.06.08 15:51:10 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.08 15:51:10 WARN  Build server is not auto-connectable.
+2022.06.08 15:51:10 WARN  no build tool detected in workspace 'C:\Users\valer\Documents\GitHub\DatoMasivos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.08 16:04:28 INFO  shutting down Metals

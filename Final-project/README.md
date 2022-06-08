@@ -17,6 +17,52 @@
 <h4 align="center"> Lopez Pablo Israel 17210585</h4>
 
 
+<h4 align="center"> Index </h4>
+ 
+Cover…………………………………………………………………………........1
+Introduction…………………………………………………………………….….3
+Theoretical framework of algorithms………………4-6
+Implementation…………………………………………………………..…..7-20
+Results……………………………………………………………………….......21-25
+Conclusions………………………………………………………………….....25
+References…………………………………………………………………….....26
+
+
+
+
+Introduction
+
+Machine learning is a discipline that, through algorithms, gives computers the ability to identify patterns in massive data and make predictions (predictive analysis). This learning allows computers to perform specific tasks autonomously, that is, without the need to be programmed. Some of the machine learning algorithms will be analyzed and a performance comparison will be made: SVM, Decision Tree, Logistic Regresion and Multilayer Perceptron.
+
+Theoretical framework of algorithms
+
+- SVM:
+
+SVM works by mapping data to a high-dimensional feature space so that data points can be categorized, even if the data cannot be otherwise linearly separated. A separator between the categories is detected and the data is transformed so that the separator can be extracted as a hyperplane. After that, the characteristics of the new data can be used to predict the group to which the new record belongs.
+
+Figure 1. Original data set
+
+
+The two categories can be separated with a curve, as shown in the figure below.
+
+Figure 2. Data with a separator added
+
+After the transformation, the boundary between the two categories can be defined by a hyperplane, as shown in the figure below.
+
+Figure 3. Transformed data
+
+- DecisionTree:
+
+They are a nonparametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules deduced from data features. A tree can be viewed as a piecewise constant approximation.
+
+- Logistic Regression:
+
+Logistic regression is one of the most popular machine learning algorithms, which falls under the supervised learning technique. It is used to predict the categorical dependent variable using a given set of independent variables.
+Logistic regression is an example of supervised learning. It is used to calculate or predict the probability of a binary event occurring (yes/no).
+
+- Multilayer perceptron:
+
+The multilayer perceptron (MLP) is a complement to the feedforward neural network. It consists of three types of layers: the input layer, the output layer, and the hidden layer. The input layer receives the input signal to be processed. The output layer performs the required task, such as prediction and classification.
 
 ##
 
@@ -618,5 +664,18 @@ println("|"+i + "|"+accuracy +"|"+ (1.0 - accuracy) +"|" +durationSeconds + "|")
 											 		
 ## Conclutions
 
-Israel: For the implementation of these models it is necessary to carry out the corresponding data treatment, for which reason one must work hard to obtain the desired results, since if the data is not treated correctly it usually happens that the results will not be the desired ones.
-Regarding the models seen in this final project, the one I see with the best performance would be the multilayer, since although the speed at which it makes the prediction is a bit slow, its error rate and its precision are good enough, this results in confidence better to the result
+- Israel: For the implementation of these models it is necessary to carry out the corresponding data treatment, for which reason one must work hard to obtain the desired results, since if the data is not treated correctly it usually happens that the results will not be the desired ones.
+Regarding the models seen in this final project, the one I see with the best performance would be the multilayer, since although the speed at which it makes the prediction is a bit slow, its error rate and its precision are good enough, this results in confidence better to the result.
+
+- Victoria: With the topics covered in class that was Machine learning and some of its algorithms that were used to carry out this final project, personally I feel that Machine Learning can help us to automate processes, and that together with the algorithms we They helped to carry out predictive analysis, focused on the csv that we used, which was the bank and that through the processes different results were obtained.
+
+References: 
+
+[1] Funcionamiento de SVM. (s. f.). svm. https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=models-how-svm-works
+
+[2] 1.10. Decision Trees. (s. f.). Scikit-Learn. https://scikit-learn.org/stable/modules/tree.html
+
+[3] Logistic Regression for Machine Learning. (s. f.). Capital One. https://www.capitalone.com/tech/machine-learning/what-is-logistic-regression/
+
+[4] Logistic Regression in Machine Learning - Javatpoint. (s. f.). Www.Javatpoint.Com. https://www.javatpoint.com/logistic-regression-in-machine-learning
+
