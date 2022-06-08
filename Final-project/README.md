@@ -192,7 +192,7 @@ val spark = SparkSession.builder.appName("LogisticRegression").getOrCreate()
 ```
 we load the csv file.
 ```
-val bank  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("bank-additional-full.csv")
+val bank  = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("bank-full.csv")
 ```
 now we need check the information for that we need add the next code
 ```
