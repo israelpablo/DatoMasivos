@@ -18,18 +18,7 @@
 
 <h1 align="center"> Indice </h1>
 
-## Practices
-### [Practice  #1](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica1.md)
-### [Practice  #2](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica2.md)
-### [Practice  #3](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica3.md)
-### [Practice  #4](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practice4.md)
-### [Practice  #5](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practice5.md)
-### [Practice  #7](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Practices/Practica7.md)
-## Research
-### 
-###  
-## Homework
-### [Homework  #]
-### 
-## Evaluation
-### [Evaluation practice](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2/Evaluation/Evaluation.md)
+
+###  [Unit 1 ](https://github.com/israelpablo/DatoMasivos/tree/Unit1/Unit1)
+###  [Unit 2 ](https://github.com/israelpablo/DatoMasivos/tree/Unit2/Unit2)
+###  [Unit 3 ](https://github.com/israelpablo/DatoMasivos/tree/Unit3/Unit3)
