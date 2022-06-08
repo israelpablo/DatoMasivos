@@ -302,6 +302,7 @@ println("|"+i + "|"+ metrics.accuracy +"|"+ (1.0 - metrics.accuracy)+"|" +durati
 |28|0.8829958920187794|0.11700410798122063|1|
 |29|0.8867225146415598|0.11327748535844018|1|
 |30|0.8838155849922297|0.11618441500777033|1|
+
 [Codigo Completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Regresion.scala)
 ##
 
