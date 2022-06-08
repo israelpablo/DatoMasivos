@@ -125,7 +125,7 @@ val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
 ```
 
 We are printing the all results.
-``
+```
 println("|"+i + "|"+evaluator.evaluate(predictionAndLabels) +"|"+ (1.0 - evaluator.evaluate(predictionAndLabels))+"|" +durationSeconds + "|")
 
 }
