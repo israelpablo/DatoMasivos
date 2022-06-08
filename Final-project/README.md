@@ -167,6 +167,7 @@ We have the resul for MultilayerPerceptronClassifier
 |29|0.8825466520307355|0.11745334796926454|6|
 |30|0.885659907766635|0.11434009223336505|7|
 
+[Codigo completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Multilayer.scala)
 ##
 
 ## Logistic Regression
@@ -301,7 +302,7 @@ println("|"+i + "|"+ metrics.accuracy +"|"+ (1.0 - metrics.accuracy)+"|" +durati
 |28|0.8829958920187794|0.11700410798122063|1|
 |29|0.8867225146415598|0.11327748535844018|1|
 |30|0.8838155849922297|0.11618441500777033|1|
-
+[Codigo Completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Regresion.scala)
 ##
 
 ## SVM
@@ -450,6 +451,7 @@ println("|"+i + "|"+ metrics.accuracy +"|"+ (1.0 - metrics.accuracy)+"|" +durati
 |29|0.882058455422219|0.11794154457778105|14|
 |30|0.8860956618464961|0.11390433815350387|18|
 
+[Codigo Completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/SVM.scala)
 ##
 ## Decision Tree 
 
@@ -600,3 +602,4 @@ println("|"+i + "|"+accuracy +"|"+ (1.0 - accuracy) +"|" +durationSeconds + "|")
 |28|0.8956344289774798|0.1043655710225202|1|
 |29|0.8936716286573293|0.1063283713426707|1|
 |30|0.8879615952732643|0.11203840472673565|1|
+[Codigo Completo](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Tree.scala)
