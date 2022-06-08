@@ -616,5 +616,5 @@ println("|"+i + "|"+accuracy +"|"+ (1.0 - accuracy) +"|" +durationSeconds + "|")
 |SVM| 15.5	0.883127415|	0.116872585|	13.96666667	|
 |Decision Tree|15.5	0.892554255	|0.107445745|	1|
 											 		
-
+## Conclutions
 
