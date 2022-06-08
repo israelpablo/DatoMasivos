@@ -19,14 +19,13 @@
 
 <h4 align="center"> Index </h4>
  
-Cover…………………………………………………………………………........1
-Introduction…………………………………………………………………….….3
-Theoretical framework of algorithms………………4-6
-Implementation…………………………………………………………..…..7-20
-Results……………………………………………………………………….......21-25
-Conclusions………………………………………………………………….....25
-References…………………………………………………………………….....26
-
+* Cover…………………………………………………………………………........1
+* Introduction…………………………………………………………………….….3
+* Theoretical framework of algorithms………………4-6
+* Implementation…………………………………………………………..…..7-20
+* Results……………………………………………………………………….......21-25
+* Conclusions………………………………………………………………….....25
+* References…………………………………………………………………….....26
 
 
 
@@ -42,27 +41,42 @@ SVM works by mapping data to a high-dimensional feature space so that data point
 
 Figure 1. Original data set
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/figura%201.png)
+
 
 The two categories can be separated with a curve, as shown in the figure below.
 
 Figure 2. Data with a separator added
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/figura%202.png)
+
 After the transformation, the boundary between the two categories can be defined by a hyperplane, as shown in the figure below.
 
 Figure 3. Transformed data
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/figura%203.png)
+
+
 - DecisionTree:
 
 They are a nonparametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules deduced from data features. A tree can be viewed as a piecewise constant approximation.
+
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/regression%20desicion.png)
 
 - Logistic Regression:
 
 Logistic regression is one of the most popular machine learning algorithms, which falls under the supervised learning technique. It is used to predict the categorical dependent variable using a given set of independent variables.
 Logistic regression is an example of supervised learning. It is used to calculate or predict the probability of a binary event occurring (yes/no).
 
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/logistic%20regression.png)
+
 - Multilayer perceptron:
 
 The multilayer perceptron (MLP) is a complement to the feedforward neural network. It consists of three types of layers: the input layer, the output layer, and the hidden layer. The input layer receives the input signal to be processed. The output layer performs the required task, such as prediction and classification.
+
+
+![img](https://github.com/israelpablo/DatoMasivos/blob/Final-project/Final-project/Multilayer.png)
 
 ##
 
@@ -678,4 +692,6 @@ References:
 [3] Logistic Regression for Machine Learning. (s. f.). Capital One. https://www.capitalone.com/tech/machine-learning/what-is-logistic-regression/
 
 [4] Logistic Regression in Machine Learning - Javatpoint. (s. f.). Www.Javatpoint.Com. https://www.javatpoint.com/logistic-regression-in-machine-learning
+
+[5] URL: https://youtu.be/2iGhnBa4u2E
 
