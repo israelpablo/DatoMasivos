@@ -693,5 +693,5 @@ References:
 
 [4] Logistic Regression in Machine Learning - Javatpoint. (s. f.). Www.Javatpoint.Com. https://www.javatpoint.com/logistic-regression-in-machine-learning
 
-[5] URL: https://youtu.be/2iGhnBa4u2E
+[5] URL: https://youtu.be/TwUjA3y_BJ4
 
