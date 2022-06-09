@@ -1,13 +1,10 @@
-package org.apache.spark.examples.ml;
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.DecisionTreeClassificationModel
 import org.apache.spark.ml.classification.DecisionTreeClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
-import org.apache.spark.ml.feature.IndexToString
-import org.apache.spark.ml.feature.StringIndexer
-import org.apache.spark.ml.feature.VectorIndexer
+import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorIndexer}
 import spark.implicits._
-import org.apache.spark.ml.feature.Normalizer
+
 // Load the data stored in LIBSVM format as a DataFrame.
 val data = spark.read.format("libsvm").load("c:/Spark/data/mllib/sample_libsvm_data.txt")
 
@@ -32,12 +29,11 @@ val dt = new DecisionTreeClassifier()
   dt.setLabelCol("indexedLabel")
   dt.setFeaturesCol("indexedFeatures")
 
-val dawe=labelIndexer.getOutputcol
 // Convert indexed labels back to original labels.
 val labelConverter = new IndexToString()
   labelConverter.setInputCol("prediction")
   labelConverter.setOutputCol("predictedLabel")
-  labelConverter.setLabels(labelIndexer.labels)
+  labelConverter.setLabels(labelIndexer.labelsArray(0))
 
 // Chain indexers and tree in a Pipeline.
 val pipeline = new Pipeline()
